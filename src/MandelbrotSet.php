@@ -11,10 +11,9 @@ namespace Mathematicator\MandelbrotSet;
 class MandelbrotSet
 {
 
-	/**
-	 * @var string
-	 */
+	/** @var string */
 	private $tempDir;
+
 
 	/**
 	 * @param string $tempDir
@@ -34,6 +33,7 @@ class MandelbrotSet
 		$this->tempDir = $tempDir;
 	}
 
+
 	/**
 	 * Load image from temp by Request and return as base64 image.
 	 *
@@ -48,6 +48,7 @@ class MandelbrotSet
 
 		return 'data:' . mime_content_type($path) . ';base64,' . base64_encode(file_get_contents($path));
 	}
+
 
 	/**
 	 * Process image by request and save to temp file.
@@ -117,7 +118,9 @@ class MandelbrotSet
 		imagedestroy($im);
 	}
 
+
 	/**
+	 * @deprecated
 	 * @param int $width
 	 * @param int $height
 	 */
@@ -190,5 +193,4 @@ class MandelbrotSet
 		}
 		echo '</table>';
 	}
-
 }

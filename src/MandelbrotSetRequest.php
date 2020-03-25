@@ -9,53 +9,35 @@ use Nette\SmartObject;
 
 class MandelbrotSetRequest
 {
-
 	use SmartObject;
 
-	/**
-	 * @var int
-	 */
+	/** @var int */
 	private $width;
 
-	/**
-	 * @var int
-	 */
+	/** @var int */
 	private $height;
 
-	/**
-	 * @var int
-	 */
+	/** @var int */
 	private $iterations;
 
-	/**
-	 * @var float
-	 */
+	/** @var float */
 	private $minX;
 
-	/**
-	 * @var float
-	 */
+	/** @var float */
 	private $maxX;
 
-	/**
-	 * @var float
-	 */
+	/** @var float */
 	private $minY;
 
-	/**
-	 * @var float
-	 */
+	/** @var float */
 	private $maxY;
 
-	/**
-	 * @var int
-	 */
+	/** @var int */
 	private $deltaA;
 
-	/**
-	 * @var int
-	 */
+	/** @var int */
 	private $deltaB;
+
 
 	/**
 	 * @param int $deltaA
@@ -84,6 +66,7 @@ class MandelbrotSetRequest
 		$this->deltaB = $deltaB;
 	}
 
+
 	/**
 	 * @return int[]
 	 */
@@ -96,10 +79,12 @@ class MandelbrotSetRequest
 		];
 	}
 
+
 	public function getFileName(): string
 	{
 		return implode('_', $this->getParams()) . '.png';
 	}
+
 
 	/**
 	 * @return int
@@ -109,6 +94,7 @@ class MandelbrotSetRequest
 		return $this->width;
 	}
 
+
 	/**
 	 * @return int
 	 */
@@ -116,6 +102,7 @@ class MandelbrotSetRequest
 	{
 		return $this->height;
 	}
+
 
 	/**
 	 * @return int
@@ -125,6 +112,7 @@ class MandelbrotSetRequest
 		return $this->iterations;
 	}
 
+
 	/**
 	 * @return float
 	 */
@@ -132,6 +120,7 @@ class MandelbrotSetRequest
 	{
 		return $this->minX;
 	}
+
 
 	/**
 	 * @return float
@@ -141,6 +130,7 @@ class MandelbrotSetRequest
 		return $this->maxX;
 	}
 
+
 	/**
 	 * @return float
 	 */
@@ -148,6 +138,7 @@ class MandelbrotSetRequest
 	{
 		return $this->minY;
 	}
+
 
 	/**
 	 * @return float
@@ -157,6 +148,7 @@ class MandelbrotSetRequest
 		return $this->maxY;
 	}
 
+
 	/**
 	 * @return int
 	 */
@@ -165,6 +157,7 @@ class MandelbrotSetRequest
 		return $this->deltaA;
 	}
 
+
 	/**
 	 * @return int
 	 */
@@ -172,5 +165,4 @@ class MandelbrotSetRequest
 	{
 		return $this->deltaB;
 	}
-
 }
