@@ -8,7 +8,7 @@ namespace Mathematicator\MandelbrotSet;
  * Calculate and render Mandelbrot set as image to file.
  * Implementation is inspired by Pavol Hejny, https://www.pavolhejny.com/.
  */
-class MandelbrotSet
+final class MandelbrotSet
 {
 
 	/** @var string */
@@ -166,7 +166,7 @@ class MandelbrotSet
 
 					echo '<td bgcolor="' . $bgColor . '"><img src="' . $this->loadImage($request) . '" border="0"></td>';
 				} elseif ($d1 === false && $d2 !== false) { // Zobrazení popisku osy
-					echo('<td valign="middle">');
+					echo '<td valign="middle">';
 
 					if ((int) round($d2) === (int) $d2) {
 						echo '<h2>^' . $d2 . '&nbsp;</h2>';

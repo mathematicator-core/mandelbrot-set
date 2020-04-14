@@ -7,7 +7,7 @@ namespace Mathematicator\MandelbrotSet;
 
 use Nette\SmartObject;
 
-class MandelbrotSetRequest
+final class MandelbrotSetRequest
 {
 	use SmartObject;
 
@@ -50,10 +50,7 @@ class MandelbrotSetRequest
 	 * @param float $minY
 	 * @param float $maxY
 	 */
-	public function __construct(
-		int $deltaA, int $deltaB, int $width = 300, $height = 300, int $iterations = 18,
-		float $minX = -2, float $maxX = 1, float $minY = -1, float $maxY = 1
-	)
+	public function __construct(int $deltaA, int $deltaB, int $width = 300, $height = 300, int $iterations = 18, float $minX = -2, float $maxX = 1, float $minY = -1, float $maxY = 1)
 	{
 		$this->width = $width;
 		$this->height = $height;
