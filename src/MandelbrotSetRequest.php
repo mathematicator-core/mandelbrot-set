@@ -50,7 +50,7 @@ final class MandelbrotSetRequest
 	 * @param float $minY
 	 * @param float $maxY
 	 */
-	public function __construct(int $deltaA, int $deltaB, int $width = 300, $height = 300, int $iterations = 18, float $minX = -2, float $maxX = 1, float $minY = -1, float $maxY = 1)
+	public function __construct(int $deltaA, int $deltaB, int $width = 300, $height = 300, int $iterations = 18, float $minX = -2.0, float $maxX = 1.0, float $minY = -1.0, float $maxY = 1.0)
 	{
 		$this->width = $width;
 		$this->height = $height;
@@ -65,7 +65,7 @@ final class MandelbrotSetRequest
 
 
 	/**
-	 * @return int[]
+	 * @return int[]|float[]
 	 */
 	public function getParams(): array
 	{
