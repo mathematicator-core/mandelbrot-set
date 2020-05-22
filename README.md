@@ -7,6 +7,8 @@ Simple Generator for create image of Mandelbrot set as base64 by full-configurat
 
 This package was inspired by Pavol Hejný.
 
+![Mandelbrot set render](mandelbrot-set.png)
+
 Install
 -------
 
