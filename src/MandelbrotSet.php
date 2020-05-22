@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Mathematicator\MandelbrotSet;
 
+
+use Nette\Utils\FileSystem;
+
 /**
  * Calculate and render Mandelbrot set as image to file.
  * Implementation is inspired by Pavol Hejny, https://www.pavolhejny.com/.
@@ -17,19 +20,11 @@ final class MandelbrotSet
 
 	/**
 	 * @param string $tempDir
-	 * @throws \Exception
 	 */
 	public function __construct(string $tempDir)
 	{
 		ini_set('max_execution_time', '100000');
-
-		if (!is_dir($tempDir) && !@mkdir($tempDir, 0777, true) && !is_dir($tempDir)) { // @ - dir may already exist
-			throw new \Exception(
-				'Unable to create directory "' . $tempDir . '". '
-				. preg_replace('#^\w+\(.*?\): #', '', error_get_last()['message'])
-			);
-		}
-
+		FileSystem::createDir($tempDir);
 		$this->tempDir = $tempDir;
 	}
 
