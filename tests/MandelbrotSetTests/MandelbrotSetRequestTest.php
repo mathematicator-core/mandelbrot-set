@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Mathematicator\MandelbrotSet\Tests;
 
 
-use Mathematicator\Integral\IntegralSolver;
 use Mathematicator\MandelbrotSet\MandelbrotSetRequest;
 use Tester\Assert;
 use Tester\TestCase;
@@ -16,10 +15,6 @@ class MandelbrotSetRequestTest extends TestCase
 {
 
 
-	/**
-	 * @param string $query
-	 * @param string $result
-	 */
 	public function testEntity(): void
 	{
 		$request = new MandelbrotSetRequest(10, 10);
