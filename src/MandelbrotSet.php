@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Mathematicator\MandelbrotSet;
 
 
+use Exception;
 use Nette\Utils\FileSystem;
 
 /**
@@ -41,7 +42,7 @@ final class MandelbrotSet
 			$this->generate($request);
 		}
 
-		return 'data:' . mime_content_type($path) . ';base64,' . base64_encode(file_get_contents($path));
+		return 'data:' . mime_content_type($path) . ';base64,' . base64_encode((string) file_get_contents($path));
 	}
 
 
@@ -57,6 +58,11 @@ final class MandelbrotSet
 		$dim_x = $w;
 		$dim_y = $h;
 		$im = imagecreatetruecolor((int) $dim_x, (int) $dim_y);
+
+		if ($im === false) {
+			throw new Exception('Image cannot be created.');
+		}
+
 		imagealphablending($im, false);
 		imagesavealpha($im, true);
 
