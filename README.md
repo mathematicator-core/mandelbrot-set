@@ -2,8 +2,10 @@
 
 [![Integrity check](https://github.com/mathematicator-core/mandelbrot-set/workflows/Integrity%20check/badge.svg)](https://github.com/mathematicator-core/mandelbrot-set/actions?query=workflow%3A%22Integrity+check%22)
 [![codecov](https://codecov.io/gh/mathematicator-core/mandelbrot-set/branch/master/graph/badge.svg)](https://codecov.io/gh/mathematicator-core/mandelbrot-set)
+[![Latest Stable Version](https://poser.pugx.org/mathematicator-core/mandelbrot-set/v/stable)](https://packagist.org/packages/mathematicator-core/mandelbrot-set)
+[![Latest Unstable Version](https://poser.pugx.org/mathematicator-core/mandelbrot-set/v/unstable)](https://packagist.org/packages/mathematicator-core/mandelbrot-set)
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](./LICENSE)
-
+[![PHPStan Enabled](https://img.shields.io/badge/PHPStan-enabled%20L8-brightgreen.svg?style=flat)](https://phpstan.org/)
 
 Simple Generator for create image of Mandelbrot set as base64 by full-configuration request.
 
@@ -129,6 +131,28 @@ one to the most abstract one:
         </td>
     </tr>
 </table>
+
+**Third-party packages:**
+
+⚠️ Not guaranteed!
+
+<table>
+    <tr>
+        <td>
+            <b>
+            <a href="https://github.com/cothema/math-php-api">
+                REST API
+            </a>
+            </b>
+        </td>
+        <td>
+            Install the whole pack as a REST API service
+            on your server (Docker ready) or
+            access it via public cloud REST API.
+        </td>
+    </tr>
+</table>
+
 
 ## Contribution
 
