@@ -23,7 +23,7 @@
 	"require": {
 		"php": ">=7.2",
 		"nette/utils": "^3.0",
-		"mathematicator-core/vizualizator": "^2.2@dev"
+		"mathematicator-core/vizualizator": "^2.2"
 	},
 	"require-dev": {
 		"brainmaestro/composer-git-hooks": "dev-master",
