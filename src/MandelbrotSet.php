@@ -19,9 +19,6 @@ final class MandelbrotSet
 	private $tempDir;
 
 
-	/**
-	 * @param string $tempDir
-	 */
 	public function __construct(string $tempDir)
 	{
 		ini_set('max_execution_time', '100000');
@@ -32,9 +29,6 @@ final class MandelbrotSet
 
 	/**
 	 * Load image from temp by Request and return as base64 image.
-	 *
-	 * @param MandelbrotSetRequest $request
-	 * @return string
 	 */
 	public function loadImage(MandelbrotSetRequest $request): string
 	{
@@ -48,8 +42,6 @@ final class MandelbrotSet
 
 	/**
 	 * Process image by request and save to temp file.
-	 *
-	 * @param MandelbrotSetRequest $request
 	 */
 	public function generate(MandelbrotSetRequest $request): void
 	{
