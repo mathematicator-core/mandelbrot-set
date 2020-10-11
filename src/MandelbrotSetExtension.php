@@ -33,8 +33,15 @@ final class MandelbrotSetExtension extends CompilerExtension
 
 	private function processTempDir(ContainerBuilder $builder): string
 	{
-		if (isset($this->config['tempDir']) === true) {
-			return $this->config['tempDir'];
+		/** @var mixed[] $config */
+		$config = $this->getConfig();
+
+		if (isset($config['tempDir']) === true) {
+			if (\is_dir($config['tempDir']) === false) {
+				throw new \RuntimeException('Temp path "' . $config['tempDir'] . '" is not directory.');
+			}
+
+			return $config['tempDir'];
 		}
 		if (isset($builder->parameters['tempDir']) === false) {
 			throw new \RuntimeException('Configuration parameter "tempDir" is not defined. Please define custom temp dir.');
