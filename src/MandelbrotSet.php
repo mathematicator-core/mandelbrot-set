@@ -84,7 +84,7 @@ final class MandelbrotSet
 					}
 
 					$angle *= $d1; // multiply the angle
-					$distance = $distance ** $d2; // power of distance
+					$distance **= $d2; // power of distance
 					// calculation of the new x, y
 					$z1 = cos($angle) * $distance;
 					$z2 = sin($angle) * $distance;

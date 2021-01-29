@@ -50,8 +50,17 @@ final class MandelbrotSetRequest
 	 * @param float $minY
 	 * @param float $maxY
 	 */
-	public function __construct(int $deltaA, int $deltaB, int $width = 300, $height = 300, int $iterations = 18, float $minX = -2.0, float $maxX = 1.0, float $minY = -1.0, float $maxY = 1.0)
-	{
+	public function __construct(
+		int $deltaA,
+		int $deltaB,
+		int $width = 300,
+		$height = 300,
+		int $iterations = 18,
+		float $minX = -2.0,
+		float $maxX = 1.0,
+		float $minY = -1.0,
+		float $maxY = 1.0
+	) {
 		$this->width = $width;
 		$this->height = $height;
 		$this->iterations = $iterations;
@@ -83,81 +92,54 @@ final class MandelbrotSetRequest
 	}
 
 
-	/**
-	 * @return int
-	 */
 	public function getWidth(): int
 	{
 		return $this->width;
 	}
 
 
-	/**
-	 * @return int
-	 */
 	public function getHeight(): int
 	{
 		return $this->height;
 	}
 
 
-	/**
-	 * @return int
-	 */
 	public function getIterations(): int
 	{
 		return $this->iterations;
 	}
 
 
-	/**
-	 * @return float
-	 */
 	public function getMinX(): float
 	{
 		return $this->minX;
 	}
 
 
-	/**
-	 * @return float
-	 */
 	public function getMaxX(): float
 	{
 		return $this->maxX;
 	}
 
 
-	/**
-	 * @return float
-	 */
 	public function getMinY(): float
 	{
 		return $this->minY;
 	}
 
 
-	/**
-	 * @return float
-	 */
 	public function getMaxY(): float
 	{
 		return $this->maxY;
 	}
 
 
-	/**
-	 * @return int
-	 */
 	public function getDeltaA(): int
 	{
 		return $this->deltaA;
 	}
 
 
-	/**
-	 * @return int
-	 */
 	public function getDeltaB(): int
 	{
 		return $this->deltaB;
