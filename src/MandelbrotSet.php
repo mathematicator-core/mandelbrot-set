@@ -60,7 +60,7 @@ final class MandelbrotSet
 
 		$blackColor = imagecolorallocate($im, 0, 0, 0);
 		$alpha_color = imagecolorallocatealpha($im, 0, 0, 0, 127);
-		imagefill($im, 0, 0, $alpha_color);
+		imagefill($im, 0, 0, (int) $alpha_color);
 
 		for ($y = 0; $y <= $dim_y; $y++) { // browsing and evaluating each point
 			for ($x = 0; $x <= $dim_x; $x++) { // find the coordinates of the point that is added in each iteration
@@ -100,7 +100,7 @@ final class MandelbrotSet
 
 				// if in each iteration he held a new point at a distance of 2 or less, the original point is filled.
 				if ($i >= $itt) {
-					imagesetpixel($im, (int) round($x), (int) round($y), $blackColor);
+					imagesetpixel($im, (int) round($x), (int) round($y), (int) $blackColor);
 				}
 			}
 		}
