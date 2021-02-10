@@ -14,15 +14,15 @@ use Nette\Utils\FileSystem;
  */
 final class MandelbrotSet
 {
-
-	/** @var string */
-	private $tempDir;
+	private string $tempDir;
 
 
 	public function __construct(string $tempDir)
 	{
 		ini_set('max_execution_time', '100000');
-		FileSystem::createDir($tempDir);
+		if (\is_dir($tempDir) === false) {
+			FileSystem::createDir($tempDir);
+		}
 		$this->tempDir = $tempDir;
 	}
 
