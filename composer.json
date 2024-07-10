@@ -22,7 +22,7 @@
 	],
 	"require": {
 		"php": "^8.0",
-		"nette/utils": "^3.0",
+		"nette/utils": "^3.0 || ^4.0",
 		"mathematicator-core/vizualizator": "^2.0 || ^3.0"
 	},
 	"require-dev": {
